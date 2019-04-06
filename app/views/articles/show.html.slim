@@ -1,0 +1,9 @@
+.padding 
+  .text-align: center
+    = raw @article.title
+  = raw @article.short_description
+  p.a
+  = raw @article.description
+  p.a.text-align: center
+    = @article.created_at.strftime('%F %T')
+
