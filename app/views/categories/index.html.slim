@@ -1,0 +1,13 @@
+.row
+  h2.col = t('.title')
+  .col
+  .col.text-right
+    = link_to t('.new'), new_category_path, class: 'btn btn-primary btn-sm new-action'
+table.table.table-striped.table-hover
+  thead
+    tr
+      th = 'Tittle'
+      th = 'Created at'
+      th 
+  tbody
+    = render partial: 'category', collection: @categories
