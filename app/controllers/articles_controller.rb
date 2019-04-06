@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: %i[show]
   before_action :article, only: %i[show edit update destroy]
 
   def index
