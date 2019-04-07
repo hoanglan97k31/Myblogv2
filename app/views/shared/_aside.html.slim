@@ -1,7 +1,7 @@
 .container.aside
-  h5.font-weight-light
+  h5category.font-weight-light
     | Category
   ul
   - @categories.each do |category|
-	  h6.font-weight-lighter
+	  h6category.font-weight-lighter
 	    = link_to raw(category.title), category_path(id: category.id)
