@@ -8,13 +8,11 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = favicon_link_tag asset_path('favicon.jpg'), :rel => 'icon', :type =>  'image/jpg'
-    / = javascript_include_tag Ckeditor.cdn_url
   body
     .admin-wrapper
       .mx-3.mt-3
-        / = render 'shared/messages'
+        = render 'shared/messages'
         .shadow.p-3.mb-5.bg-white.rounded
           = render 'shared/top'
-          / = javascript_include_tag Ckeditor.cdn_url
           = yield
           = render 'shared/footer'
