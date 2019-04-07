@@ -1,6 +1,6 @@
 = simple_form_for @article do |f|
-  = f.input :title
-  = f.input :short_description
-  = f.input :description
+  = f.input :title, as: :trix_editor
+  = f.input :short_description, as: :trix_editor
+  = f.input :description, as: :trix_editor
   = f.button :submit, class: 'btn-primary'
 

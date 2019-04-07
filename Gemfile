@@ -29,6 +29,8 @@ gem 'pry-byebug'
 gem 'simple_form'
 gem 'slim'
 gem 'devise'
+gem 'trix-rails', require: 'trix'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
