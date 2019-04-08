@@ -6,4 +6,5 @@ class Article < ApplicationRecord
   validates :description, presence: true, length: { minimum: 10, maximum: 8000 }
 
   scope :created_at_desc, -> { order(created_at: :desc) }
+  mount_uploader :image, ImageUploader
 end

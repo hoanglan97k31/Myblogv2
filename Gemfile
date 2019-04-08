@@ -30,6 +30,7 @@ gem 'simple_form'
 gem 'slim'
 gem 'devise'
 gem 'trix-rails', require: 'trix'
+gem 'carrierwave', '~> 1.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

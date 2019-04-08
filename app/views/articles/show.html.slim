@@ -1,12 +1,14 @@
 .padding 
   h1article.text-align: center
     = raw @article.title
-  p.a
-  justify
-    = raw @article.short_description
-  p.a
-  justify
-    = raw @article.description
-  p.a.text-align: center
-    = @article.created_at.strftime('%F')
+  .space0.text-align: center
+    = image_tag @article.image_url.to_s
+  .space1
+    justify
+      = raw @article.short_description
+    p.a
+    justify
+      = raw @article.description
+    p.a.text-align: center
+      = @article.created_at.strftime('%F')
 
