@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @articles = Article.created_at_desc
+    @category = Category.created_at_desc.find(params[:id])
   end
 
   def new
