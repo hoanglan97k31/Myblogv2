@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @articles = Article.created_at_desc
-    @categories = Category.title_asc
+    @categories = Category.created_at_desc
   end
   
   def show; end
