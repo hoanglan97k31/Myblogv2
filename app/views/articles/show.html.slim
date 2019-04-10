@@ -1,8 +1,9 @@
-.padding 
+.padding
   h1article.text-align: center
     = raw @article.title
-  .space0.text-align: center
-    = image_tag @article.image_url.to_s
+.space0.text-align: center
+  = image_tag @article.image_url.to_s
+.padding  
   .space1
     justify
       = raw @article.short_description
