@@ -4,5 +4,6 @@
       = link_to raw(article.title), article_path(id: article.id)
     justify
       = raw article.short_description
-    p.a.text-align: center
-      = article.created_at.strftime('%F')
+    .fontsizetimestamps  
+      p.a.text-align: center
+        = article.created_at.strftime('%F')
