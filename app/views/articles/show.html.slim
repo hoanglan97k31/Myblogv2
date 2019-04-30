@@ -10,6 +10,6 @@
     p.a
     justify
       = raw @article.description
-    p.a.text-align: center
-      = @article.created_at.strftime('%F')
-
+    .fontsizetimestamps  
+      p.a.text-align: center
+        = @article.created_at.strftime('%d thg %_m, %Y')
