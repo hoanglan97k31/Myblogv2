@@ -7,3 +7,5 @@
     .fontsizetimestamps  
       p.a.text-align: center
         = article.created_at.strftime('%F')
+        | &nbsp;&nbsp;&nbsp;&nbsp;
+        = article.read_time
