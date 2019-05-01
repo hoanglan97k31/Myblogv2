@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new article_params
+    @article.category_ids = params[:article][:category_ids]    
     return render :new unless @article.save
     redirect_to @article
   end
@@ -21,6 +22,7 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def update
+    @article.category_ids = params[:article][:category_ids]
     return render :edit unless @article.update(article_params)
     redirect_to @article
   end
@@ -37,6 +39,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :short_description, :description, :image, :category_id)
+    params.require(:article).permit(:title, :short_description, :description, :image, :read_time)
   end
 end

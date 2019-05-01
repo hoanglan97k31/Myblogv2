@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_08_145559) do
+ActiveRecord::Schema.define(version: 2019_05_01_162035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,17 @@ ActiveRecord::Schema.define(version: 2019_04_08_145559) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id"
     t.string "image"
-    t.index ["category_id"], name: "index_articles_on_category_id"
+    t.string "slug"
+    t.string "read_time"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
+  end
+
+  create_table "articles_categories", force: :cascade do |t|
+    t.bigint "article_id"
+    t.bigint "category_id"
+    t.index ["article_id"], name: "index_articles_categories_on_article_id"
+    t.index ["category_id"], name: "index_articles_categories_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -42,5 +50,6 @@ ActiveRecord::Schema.define(version: 2019_04_08_145559) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "articles", "categories"
+  add_foreign_key "articles_categories", "articles"
+  add_foreign_key "articles_categories", "categories"
 end

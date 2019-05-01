@@ -2,7 +2,8 @@
   = f.input :title, as: :trix_editor
   = f.input :short_description, as: :trix_editor
   = f.input :description, as: :trix_editor
-  = f.association :category
+  = f.association :categories, as: :check_boxes,label_method: :title
+  = f.input :read_time
   = f.input :image
   = f.button :submit, class: 'btn-primary'
 
