@@ -5,4 +5,6 @@ p.a
     .col-sm-2
       = render 'shared/aside'
 .text-align: center
-  = link_to_next_page @articles, 'Next Page' 
+  = link_to_prev_page @articles, 'Previous Page' 
+  | &ensp; &ensp;
+  = link_to_next_page @articles, 'Next Page'
