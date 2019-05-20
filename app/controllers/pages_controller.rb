@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_action :article_and_category, only: :show
 
   def index
-    @articles = Article.created_at_desc.page(params[:page]).per(4)
+    @articles = Article.created_at_desc.page(params[:page]).per(15)
     @categories = Category.created_at_desc
   end
   
