@@ -1,11 +1,12 @@
 - @articles.each do |article|
-  .space
-    h5.text-align: right
-      = link_to raw(article.title), article_path(id: article.id)
-    justify
-      = raw article.short_description
-    .fontsizetimestamps  
-      p.a.text-align: center
-        = article.created_at.strftime('%d thg %_m, %Y')
-        | &nbsp;&nbsp;&nbsp;&nbsp;
-        = article.read_time
+  justify
+    = link_to raw(article.title), article_path(id: article.id)
+  .fontsizetimestamps 
+    p.a
+      = article.created_at.strftime('%d thg %_m, %Y')
+      | &nbsp;&nbsp;&nbsp;&nbsp;
+      = article.read_time
+      | &nbsp;&nbsp;&nbsp;&nbsp;
+      - article.categories.each do |categories|
+        = categories.title
+        |&nbsp;&nbsp;
