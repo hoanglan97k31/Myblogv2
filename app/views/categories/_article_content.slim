@@ -1,7 +1,6 @@
 - @category.articles.each do |article|
   .padding4
-    justify
-      = link_to raw(article.title), article_path(id: article.id)
+    = link_to raw(article.title), article_path(id: article.id)
     .fontsizetimestamps 
       p.a
         = article.created_at.strftime('%d thg %_m, %Y')
