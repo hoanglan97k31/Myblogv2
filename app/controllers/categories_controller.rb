@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.created_at_desc.find(params[:id])
+    @categories = Category.created_at_desc
   end
 
   def new
