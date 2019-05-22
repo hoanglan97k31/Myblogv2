@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
   resources :pages, only: :index, concerns: :paginatable
   resources :articles
   resources :categories
