@@ -21,6 +21,7 @@ p.a
             - @article.categories.each do |categories|
               = link_to categories.title, category_path(id: categories.id)
               |&nbsp;&nbsp;
+          .space2    
           .fontsizetimestamps  
             p.a.text-align: center
               = @article.created_at.strftime('%d thg %_m, %Y')
