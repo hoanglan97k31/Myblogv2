@@ -14,6 +14,13 @@ p.a
           p.a
           justify
             = raw @article.description
+          .space2
+          .text-align: left
+            strong
+              | Tags: &nbsp;&nbsp;&nbsp;&nbsp;
+            - @article.categories.each do |categories|
+              = link_to categories.title, category_path(id: categories.id)
+              |&nbsp;&nbsp;
           .fontsizetimestamps  
             p.a.text-align: center
               = @article.created_at.strftime('%d thg %_m, %Y')
