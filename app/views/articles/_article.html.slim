@@ -1,7 +1,5 @@
 tr
   td = link_to raw(article.title), article_path(id: article.id)
-  td = raw article.short_description
-  td = raw article.description
   td = article.created_at
   td.text-right
     .btn-group role='group'
