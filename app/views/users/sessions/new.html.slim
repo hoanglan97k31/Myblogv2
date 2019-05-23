@@ -1,12 +1,13 @@
 .login-wrapper.container
   #login.card.card-login.mx-auto.mt-5
     .card-header
-      h3.text-center Sign in Lan Blog
+      h3.text-center Private Location
     .card-body
       = render 'shared/messages'
       = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .form-inputs
-          = f.input :username, required: false, autofocus: true
-          = f.input :password, required: false
+          = f.input :username, label: 'Codename', required: false, autofocus: true
+          = f.input :password, label: 'Secret Code', required: false
+        br
         .form-actions
-          = f.button :submit, 'Sign in', class: 'btn btn-primary btn-block'
+          = f.button :submit, 'Access', class: 'btn btn-primary btn-block'

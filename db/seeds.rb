@@ -1,1 +1,2 @@
-Admin.create(username: 'admin', password: 'admin123', name: 'admin')
+Admin.destroy_all
+Admin.create(username: 'myworld', password: 'rasengan4948', name: 'admin')
