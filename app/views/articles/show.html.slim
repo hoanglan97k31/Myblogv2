@@ -19,7 +19,7 @@ p.a
             strong
               | Tags: &nbsp;&nbsp;&nbsp;&nbsp;
             - @article.categories.each do |categories|
-              = link_to categories.title, category_path(id: categories.id)
+              = link_to categories.title, category_path(id: categories.id), class:'tags'
               |&nbsp;&nbsp;
           .space2    
           .fontsizetimestamps  
